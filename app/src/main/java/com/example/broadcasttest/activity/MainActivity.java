@@ -47,6 +47,6 @@ public class MainActivity extends AppCompatActivity {
 //        intent.setComponent(new ComponentName(getPackageName(), "com.example.broadcasttest.receiver.MyBroadcastReceiver"));
         intent.addFlags(0x01000000);
         intent.putExtra("myBroadcast", "hello world !");
-        sendBroadcast(intent);
+        sendOrderedBroadcast(intent, null);
     }
 }
