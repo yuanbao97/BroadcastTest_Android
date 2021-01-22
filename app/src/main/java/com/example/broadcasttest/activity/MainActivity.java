@@ -44,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.sendBroadcastButton)
     public void onClick() {
         Intent intent = new Intent("com.example.broadcasttest.receiver.MY_BROADCAST");
-        intent.setComponent(new ComponentName(getPackageName(), "com.example.broadcasttest.receiver.MyBroadcastReceiver"));
+//        intent.setComponent(new ComponentName(getPackageName(), "com.example.broadcasttest.receiver.MyBroadcastReceiver"));
+        intent.addFlags(0x01000000);
         intent.putExtra("myBroadcast", "hello world !");
         sendBroadcast(intent);
     }
